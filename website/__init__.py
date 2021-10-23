@@ -4,7 +4,7 @@ from os import path
 from flask_login import LoginManager
 
 db = SQLAlchemy()
-DB_NAME = "user_database.db"
+DB_NAME = "database.db"
 
 
 def create_app():
@@ -19,7 +19,7 @@ def create_app():
     app.register_blueprint(views, url_prefix="/")
     app.register_blueprint(auth, url_prefix="/")
 
-    from .models import User
+    from .models import User,Post
 
     create_database(app)
 
