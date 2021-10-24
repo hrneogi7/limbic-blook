@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template, flash, redirect, request, url_for
 from flask_login import login_required, current_user
-from .models import Post, User
+from .models import Post, User, Comment
 from . import db
 
 views = Blueprint("views", __name__)
@@ -66,3 +66,16 @@ def posts(username):
 
     return render_template("posts.html", user=current_user, posts=posts, username=username)
 
+@views.route("/create-comment/<post_id", methods=['POST'])
+@login_required
+def create_comment(post_id):
+    text = request.form.get('text')
+
+    if post:
+        comment = Comment(text=text,author=current_user.id,post_id=post_id)
+        db.session.add(comment)
+        db.session.commit()
+    else:
+        flash('Please type something to add comment', category='error')
+
+    return redirect(url_for("views.home"))
