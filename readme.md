@@ -1,7 +1,7 @@
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 
 # Web memoir
-### An web app for blogging 
+### A web app for blogging 
 
 > Backend part of the application made using Flask and uses sqlite for the database.
 > Frontend part of the application is designed by using bootstrap
