@@ -3,8 +3,10 @@
 # Web memoir
 ### A web app for blogging 
 
-> Backend part of the application made using Flask and uses sqlite for the database.
+> Backend part of the application made using Flask and uses Postgres SQL for the database.
 > Frontend part of the application is designed by using bootstrap
+> Hosted on heroku, can be acessed from [here](https://limbic-blook.herokuapp.com) 
+
 
 ## Local Usage
 
